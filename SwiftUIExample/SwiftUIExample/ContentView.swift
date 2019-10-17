@@ -9,11 +9,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let posts = ["1","2","3"]
+
     var body: some View {
-        VStack {
-            Text("sadasdasd")
-            Text("Hello World")
+
+        NavigationView {
+            List{
+                
+                ForEach(posts, id: \.self) { post in
+                    Text(post)
+                }
+                
+            }.navigationBarTitle(Text("Natureza"))
         }
+        
         
     }
 }
